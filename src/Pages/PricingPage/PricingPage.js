@@ -56,12 +56,12 @@ const PricingPage = () => {
             <Box sx={{ display: "flex", marginLeft: "18px" }}>
                 <Typography sx={{ fontSize: "32px", color: "#202224", marginTop: "40px" ,fontWeight:700}}>Pricing</Typography>
             </Box>
-            <Grid2 container justifyContent="center" gap={6} padding={4} ml="-40px">
+            <Grid2 container justifyContent="center" gap={6} padding={4}    sx={{ ml: { xs: "0px", lg: "-40px" } }}>
             {pricingPlans.map((plan, index) => (
                 <Card 
                 key={index} 
                 sx={{ 
-                    width: 480,
+                    width: {xs:340,lg:480},
                     // height:"900px", 
                     textAlign: "center", 
                     padding: 2, 
