@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family: "Nunito Sans", serif !important;
+}
+.css-11yq79q {
+  background: rgba(245, 246, 250, 1);
+
+}
