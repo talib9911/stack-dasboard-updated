@@ -58,9 +58,9 @@ const ContactPage = () => {
         paddingRight: "30px",
       }}
     >
-      <Box sx={{ display: "flex",alignContent:"center",alignItems:"center",justifyContent:"space-between", marginLeft: "17px",marginRight: "27px", marginTop: "40px" }}>
+      <Box sx={{ display: "flex",alignContent:"center",alignItems:"center",justifyContent:"space-between", marginLeft: "17px",marginRight: "27px", marginTop: "30px" }}>
         <Typography
-          sx={{ fontSize: "32px", color: "#202224",fontWeight:600,ml:"13px" }}
+          sx={{ fontSize: "32px", color: "#202224",fontWeight:700,ml:"13px" }}
         >
           Contact
         </Typography>

@@ -65,7 +65,7 @@ const DealsTable = () => {
           marginBottom: "15px",
         }}
       >
-        <h2 style={{ marginBottom: "15px", fontSize: "24px", color:"rgba(32, 34, 36, 1)",fontWeight:600 }}>
+        <h2 style={{ marginBottom: "15px", fontSize: "24px", color:"rgba(32, 34, 36, 1)",fontWeight:700 }}>
           Deals Details
         </h2>
         <div>
@@ -87,17 +87,18 @@ const DealsTable = () => {
                 textAlign: "left",
                 borderTopLeftRadius: "12px", 
                 borderBottomLeftRadius: "12px",
-               paddingLeft:"30px"
+               paddingLeft:"30px",
+               fontWeight:800
               }}
             >
               Product Name
             </th>
-            <th style={{ padding: "12px", textAlign: "left" }}>Location</th>
-            <th style={{ padding: "12px", textAlign: "left" }}>Date - Time</th>
-            <th style={{ padding: "12px", textAlign: "left" }}>Pieces</th>
-            <th style={{ padding: "12px", textAlign: "left" }}>Amount</th>
+            <th style={{ padding: "12px", textAlign: "left",fontWeight:800 }}>Location</th>
+            <th style={{ padding: "12px", textAlign: "left",fontWeight:800 }}>Date - Time</th>
+            <th style={{ padding: "12px", textAlign: "left",fontWeight:800 }}>Pieces</th>
+            <th style={{ padding: "12px", textAlign: "left",fontWeight:800 }}>Amount</th>
             <th style={{ padding: "12px", textAlign: "left", borderTopRightRadius: "12px",  
-        borderBottomRightRadius: "12px", }}>Status</th>
+        borderBottomRightRadius: "12px",fontWeight:800 }}>Status</th>
           </tr>
         </thead>
         <tbody>
@@ -169,12 +170,13 @@ const DealsTable = () => {
               >
                 <span
                   style={{
-                    padding: "5px 10px",
+                    padding: "5px 12px",
                     borderRadius: "15px",
                     fontSize: "12px",
+                    fontWeight:700,
                     background:
                       deal.status === "Delivered"
-                        ? "green"
+                        ? "#00B69B"
                         : deal.status === "Shipped"
                         ? "blue"
                         : deal.status === "Pending"

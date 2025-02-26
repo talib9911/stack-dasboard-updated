@@ -153,7 +153,7 @@ function Dashboard(props) {
                 primary={
                   <Typography
                     sx={{
-                      fontWeight:500,
+                      fontWeight:700,
                       fontSize: "14px",
                       color:"#202224",
                       ...(highlighted && { fontWeight: 100, color: "white" }),
@@ -205,7 +205,8 @@ function Dashboard(props) {
                   <Typography
                     sx={{
                       fontSize: "14px",
-                      ...(highlighted && { fontWeight: 100, color: "white" }),
+                      fontWeight:700,
+                      ...(highlighted && { fontWeight: 600, color: "white" }),
                     }}
                   >
                     {text}
@@ -241,7 +242,8 @@ function Dashboard(props) {
               <Typography
                 sx={{
                   fontSize: "14px",
-                  ...(highlighted && { fontWeight: 100, color: "white" }),
+                  fontWeight:700,
+                  ...(highlighted && { fontWeight: 600, color: "white" }),
                 }}
               >
                 {text}
@@ -270,7 +272,7 @@ function Dashboard(props) {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
           bgcolor: "white",
-          px:"50px",
+          px:"30px",
           boxShadow:"none"
         }}
       >

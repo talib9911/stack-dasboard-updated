@@ -51,8 +51,8 @@ const SearchBox = () => {
           <SearchIcon sx={{fill:"rgba(0, 0, 0, 0.3)", zIndex:"1"}}/>
         </SearchIconWrapper>
         <StyledInputBase
-          placeholder="Search"  
-          inputProps={{ "aria-label": "search" }} sx={{bgcolor:"#F5F6FA",width:{lg:"20vw"}, height:"35px",  color:"black", border:"1px solid #D5D5D5",borderRadius:"19px" }}
+          placeholder="Search product name"  
+          inputProps={{ "aria-label": "search" }} sx={{bgcolor:"#FFFFFF",width:{lg:"15vw"}, height:"35px",  color:"black", border:"1px solid #D5D5D5",borderRadius:"19px" }}
         />
       </Search>
     </Box>

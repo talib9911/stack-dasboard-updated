@@ -49,9 +49,9 @@ const ProductsPage = () => {
         boxSizing: "border-box",
       }}
     >
-      <Box sx={{ display: "flex", marginLeft: "21px", mt: "40px" }}>
+      <Box sx={{ display: "flex", marginLeft: "21px", mt: "30px" }}>
         <Typography
-          sx={{ fontSize: "32px", color: "#202224", fontWeight: 600 }}
+          sx={{ fontSize: "32px", color: "#202224", fontWeight: 700 }}
         >
           Products
         </Typography>
@@ -61,7 +61,7 @@ const ProductsPage = () => {
             display:"flex",
             flexShrink:1,
             // boxSizing: "border-box",
-            backgroundColor: "red", 
+            // backgroundColor: "red", 
             backgroundImage: `url(${backimg})`,
             backgroundSize: "100vw",
             backgroundRepeat: "no-repeat",
@@ -82,11 +82,11 @@ const ProductsPage = () => {
             display: "flex",
             alignItems: "flex-start",
             flexDirection: "column",
-           paddingTop:"50px",
+           paddingTop:"60px",
            paddingLeft:"70px",
            paddingRight:"930px",
            lineHeight:"48px",
-           
+           pb:"20px"
         }}
         >
           <Typography sx={{ fontSize: "16px", color: "white",mb:"10px" }}>
@@ -120,7 +120,7 @@ const ProductsPage = () => {
       <div className="mt-6">
       <Box className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-[160px] pl-[13px] mt-[37px]">
   {products.map((product) => (
-    <div key={product.id} className="p-3 bg-white shadow-md " style={{borderRadius:"14px",width:"520px"}}>
+    <div key={product.id} className="p-3 bg-white" style={{borderRadius:"14px",width:"520px" , boxShadow: "6px 6px 54px rgba(0, 0, 0, 0.1)"}}>
         <Box sx={{position:"relative"}}>
             <Box sx={{display:"flex",pl:"20px" ,position:"absolute",left:-8,top:192}}>
             <img src={leftimg} style={{width:"45px"}}/>
@@ -134,9 +134,9 @@ const ProductsPage = () => {
         </Box>
         </Box>
       <Box sx={{display:"flex",flexDirection:"column", alignItems:"flex-start",pl:"25px"}}>
-     <Box sx={{display:"flex",justifyContent:"space-around",gap:30}}> <h3 className="mt-2 text-lg font-semibold">{product.name}</h3>
+     <Box sx={{display:"flex",justifyContent:"space-around",gap:30}}> <h3 className="mt-2 text-lg font-bold">{product.name}</h3>
       <img src={heartimg} /></Box>
-      <p className="text-[15px] font-[700] text-[#5f90ff]">{product.price}</p>
+      <p className="text-[15px] font-[700] text-[#4880ff]">{product.price}</p>
       <Box display="flex" gap="2px" mt="8px">
         <img src={yellowstar}/>
         <img src={yellowstar}/>

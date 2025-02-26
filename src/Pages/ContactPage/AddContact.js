@@ -22,14 +22,14 @@ const AddContact = () => {
     >
       <Box sx={{ display: "flex", marginLeft: "17px" }}>
         <Typography
-          sx={{ fontSize: "32px", color: "#202224", marginTop: "40px" }}
+          sx={{ fontSize: "32px", color: "#202224", marginTop: "40px",fontWeight:700 }}
         >
           Add New Contact
         </Typography>
       </Box>
       <div
         className="ml-[12px] px-[30px] w-[80vw] sm:px-[100px] mt-[30px] lg:flex lg:flex-col bg-white "
-        style={{ border: "1px solid #B9B9B9", borderRadius: "14px" }}
+        style={{ border: "1px solid rgba(185, 185, 185, 0.5)",  borderRadius: "14px" }}
       >
         <Box
           sx={{

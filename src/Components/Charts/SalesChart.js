@@ -59,14 +59,14 @@ const SalesChart = () => {
     <Card sx={{ p: 2,marginLeft:"20px",marginRight:"20px" ,boxShadow: "6px 6px 54px rgba(0, 0, 0, 0)",borderRadius:"14px"}}>
       <CardContent>
         <Box display="flex" justifyContent="space-between" p="0px">
-        <Typography sx={{fontSize:"24px",color:"#202224",fontWeight:600}}>Sales Details</Typography>
+        <Typography sx={{fontSize:"24px",color:"#202224",fontWeight:700}}>Sales Details</Typography>
         {/* Select Dropdown */}
         <Dropdown  selected={selectedMonth}/>
 
         </Box>
         {/* Chart Component */}
-        <ResponsiveContainer width="100%" height={300} style={{marginTop:"30px"}}>
-          <LineChart data={salesData[selectedMonth]}>
+        <ResponsiveContainer width="102%" height={300} style={{marginTop:"30px",marginLeft:"-30px"}}>
+          <LineChart data={salesData[selectedMonth]} >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />

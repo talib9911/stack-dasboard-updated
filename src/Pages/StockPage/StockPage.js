@@ -17,6 +17,7 @@ import s6 from '../../Assets/Images/s6.svg';
 import s7 from '../../Assets/Images/s7.svg';
 import delicon from '../../Assets/Images/delicon.svg';
 import arrows from '../../Assets/Images/arrows.svg';
+import SearchBox from '../../Components/SearchBox/SearchBox2';
 
 const products = [
   {
@@ -97,9 +98,10 @@ const StockPage = () => {
         };
     return (
         <div style={{ backgroundColor: "#f5f6fa", width: "100%" }}>
-            <Box sx={{ display: "flex", marginLeft: "17px" }}>
-                <Typography sx={{ fontSize: "32px", color: "#202224",fontWeight:700,mt:"22px",ml:"32px" }}>Product Stock</Typography>
-            </Box>
+          <Box sx={{display:"flex",justifyContent:"space-around",alignItems:"center",gap:"1036px",mt:"20px",mb:"10px",ml:"8px"}}>
+          <Typography sx={{ fontSize: "32px", color: "#202224",fontWeight:700,mt:"22px",ml:"14px" }}>Product Stock</Typography>
+         <SearchBox/>    
+      </Box>
               <Box sx={{ padding: "0px",backgroundColor:"white",borderRadius:"14px",border:"1px solid #D5D5D5",ml:"20px",mt:"22px",ml:"37px",width:"83vw" }}>
             <TableContainer >
       <Table>

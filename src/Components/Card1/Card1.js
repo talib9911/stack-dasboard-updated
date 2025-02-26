@@ -88,7 +88,7 @@ const Card1 = () => {
                   {stat.icon}
                 </Typography>
             </Box>
-            <Box display="flex" justifyContent="space-between" mt="40px" alignItems="center" >
+            <Box display="flex" justifyContent="space-between" mt="40px" alignItems="center" width="250px" >
             <Box display="flex" alignItems="center" gap={1} >
               {stat.increase ? (
                 <img src={pathupicon} style={{ fontSize:"14px" }} />
@@ -97,13 +97,13 @@ const Card1 = () => {
               )}
               <Typography
                 variant="body2"
-                color={stat.increase ? "green" : "red"}
-              sx={{fontSize:"12px"}}
+                color={stat.increase ? "#40c8b4" : "#fa5478"}
+              sx={{fontSize:"12px",fontWeight:700}}
               >
-                {stat.change}%
+                {stat.change}
               </Typography>
             </Box>
-            <Typography sx={{fontSize:"16px",mr:{xs:"0px", xl:"81px" }}}>
+            <Typography sx={{fontSize:"16px",ml:{xs:"0px", xl:"-91px" }}}>
               {stat.description2}
               </Typography>
             </Box>
