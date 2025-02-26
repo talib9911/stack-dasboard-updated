@@ -272,7 +272,7 @@ function Dashboard(props) {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
           bgcolor: "white",
-          px:"30px",
+          px:{xs:"10px",md:"30px"},
           boxShadow:"none"
         }}
       >
@@ -291,31 +291,32 @@ function Dashboard(props) {
          </Box>
           <Box sx={{display:{xs:"none", md:"flex", },ml:{xl:"120px"}, gap:"40px" 
             }}>
-          <Box sx={{bgcolor:"white", display:"flex", flexShrink:1, justifyContent:"center",alignItems:"center", padding:"4px 10px", gap:"6px", borderRadius:"4px", }}>
+          <Box sx={{bgcolor:"white", display:{xs:"none", xl:"flex", }, flexShrink:1, justifyContent:"center",alignItems:"center", padding:"4px 10px", gap:"6px", borderRadius:"4px", }}>
             <img src={noticon}/>
           </Box>
-         <Box sx={{display:"flex",gap:"17px", alignItems:"center"}}>
-          <img src={flag}/>
+         <Box sx={{display:{xs:"none", lg:"flex", },gap:{xs:"5px",lg:"17px"}, alignItems:"center"}}>
+          <Box sx={{display:{xs:"none", xl:"flex" }}}><img src={flag}/></Box>
           <Typography variant="h4" color="#646464" fontSize="16px" fontWeight="600">
           English
           </Typography>
           <img src={downarrow} style={{ width: "15px", height: "auto",marginTop:"-6px" }}/>
          </Box>
-              <Box sx={{bgcolor:"white", display:"flex", justifyContent:"center",alignItems:"center", padding:"4px 10px", gap:"6px", borderRadius:"4px"}}>
-              <div style={{backgroundColor:"#d8d8d8", borderRadius:"50px", width:"32px",height:"32px",overflow:"hidden"}}><img src={monipic} style={{ width: "29px",marginTop:"3px",objectFit:"cover" }}/></div>
+         <Box sx={{display:"flex",gap:{xs:"10px",lg:"20px"}}}>
+              <Box sx={{ display:"flex", justifyContent:"center",alignItems:"center", padding:"6px 10px", gap:"6px", borderRadius:"4px"}}>
+              <div style={{backgroundColor:"#d8d8d8", borderRadius:"50px", width:"36px",height:"36px",overflow:"hidden"}}><img src={monipic} style={{ width: "30px",marginTop:"6px",marginLeft:"2px",objectFit:"cover" }}/></div>
           </Box>
-          <Box sx={{display:"flex",alignItems:"flex-start",flexDirection:"column",rowGap:"3px"}}>
-          <Typography variant="h4" color="#404040" fontSize="16px" fontWeight="700">
+          <Box sx={{display:"flex",alignItems:"flex-start",flexDirection:"column",rowGap:"3px",marginTop:"5px"}}>
+          <Typography variant="h4" color="#404040" fontSize="clamp(10px, 2vw, 16px)" fontWeight="700">
           Moni Roy
           </Typography>
           <Typography variant="h4" color="#565656" fontSize="13px" fontWeight="600">
           Admin
           </Typography>
           </Box>
-          <Box sx={{ flexGrow: 0, mr:{xs:"40px",lg:"0px"}, ml:{xs:"90px", sm:"12px",md:"30px", lg:"0px"},bgcolor:"white" }}>
+          <Box sx={{  mr:{xs:"10px",lg:"0px"}, ml:{xs:"70px", sm:"12px",md:"30px", lg:"0px"},bgcolor:"white" }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <img src={more} style={{width:"26px",marginTop:"7px"}} />
+                <img src={more} style={{width:"26px",marginTop:"11px"}} />
               </IconButton>
             </Tooltip>
             <Menu
@@ -340,6 +341,7 @@ function Dashboard(props) {
                 </MenuItem>
               ))}
             </Menu>
+          </Box>
           </Box>
           </Box>
         </Toolbar>

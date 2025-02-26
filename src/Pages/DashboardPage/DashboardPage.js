@@ -12,10 +12,10 @@ const DashboardPage = () => {
       <Box sx={{mt:"20px"}}>
     <Card1/>
     </Box>      
-    <Box sx={{mt:"20px"}}>
+    <Box sx={{ mt: "20px", overflowX: "auto", width: { xs: "87vw", sm: "100%" } }}>
     <SalesChart/>
     </Box>
-    <Box sx={{mt:"40px"}}>
+    <Box sx={{mt:"40px", overflowX: "auto", width: { xs: "87vw", sm: "100%" }}}>
     <Deals />
     </Box>
     </div>

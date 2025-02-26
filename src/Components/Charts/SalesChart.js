@@ -61,16 +61,17 @@ const SalesChart = () => {
         <Box display="flex" justifyContent="space-between" p="0px">
         <Typography sx={{fontSize:"24px",color:"#202224",fontWeight:700}}>Sales Details</Typography>
         {/* Select Dropdown */}
-        <Dropdown  selected={selectedMonth}/>
+        <Dropdown  selected={selectedMonth} onSelect={setSelectedMonth}/>
 
         </Box>
         {/* Chart Component */}
-        <ResponsiveContainer width="102%" height={300} style={{marginTop:"30px",marginLeft:"-30px"}}>
+        <ResponsiveContainer width="102%" height={300} style={{marginTop:"30px",marginLeft:"-30px",overflowX:"auto"}}>
+          
           <LineChart data={salesData[selectedMonth]} >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />
-            <Tooltip />
+          <Tooltip />
             <Line type="monotone" dataKey="value" stroke="#007bff" dot={{ stroke: "blue", strokeWidth: 2 }} />
           </LineChart>
         </ResponsiveContainer>

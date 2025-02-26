@@ -53,14 +53,17 @@ const Card1 = () => {
   return (
     <Box
       display="grid"
-      gridTemplateColumns="repeat(auto-fit, minmax(220px, 1fr))"
+      sx={{ gridTemplateColumns: { xs: "repeat(1, 1fr)",md: "repeat(2, 1fr)",xl: "repeat(4, 1fr)" } }}
       gap={2}
       p={2}
+      justifyContent="center"
+      alignItems="center"
+      alignContent="center"
     >
       {statsData.map((stat, index) => (
         <Card
           key={index}
-          sx={{ minWidth: 200, p: 2, boxShadow: "6px 6px 54px rgba(0, 0, 0, 0)", borderRadius: "14px" }}
+          sx={{ maxWidth:{xs:"400px"} , minWidth:{ lg : '100%'}, p: 2, boxShadow: "6px 6px 54px rgba(0, 0, 0, 0)", borderRadius: "14px" }}
         >
           <CardContent>
             <Box
@@ -88,7 +91,7 @@ const Card1 = () => {
                   {stat.icon}
                 </Typography>
             </Box>
-            <Box display="flex" justifyContent="space-between" mt="40px" alignItems="center" width="250px" >
+            <Box display="flex" justifyContent="space-between" mt="40px" alignItems="center"    sx={{ width: { xs: "230px",sm:"216px", lg: "250px" } }} >
             <Box display="flex" alignItems="center" gap={1} >
               {stat.increase ? (
                 <img src={pathupicon} style={{ fontSize:"14px" }} />

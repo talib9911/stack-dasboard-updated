@@ -55,6 +55,7 @@ const DealsTable = () => {
         boxShadow: "6px 6px 54px rgba(0, 0, 0, 0)",
         width: "97.5%",
         margin: "auto",
+        overflowX: "auto",
       }}
     >
       <div
@@ -72,10 +73,11 @@ const DealsTable = () => {
           <Dropdown selected={selectedMonth} onSelect={setSelectedMonth} />
         </div>
       </div>
-
+      <Box sx={{ overflowX: "auto" }}>
       <table
         style={{
           width: "100%",
+            minWidth: "800px", 
           borderCollapse: "collapse",
         }}
       >
@@ -192,6 +194,7 @@ const DealsTable = () => {
           ))}
         </tbody>
       </table>
+      </Box>
     </Box>
   );
 };
