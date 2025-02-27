@@ -90,6 +90,7 @@ const Card1 = () => {
                 >
                   {stat.icon}
                 </Typography>
+            
             </Box>
             <Box display="flex" justifyContent="space-between" mt="40px" alignItems="center"    sx={{ width: { xs: "230px",sm:"216px", lg: "250px" } }} >
             <Box display="flex" alignItems="center" gap={1} >
