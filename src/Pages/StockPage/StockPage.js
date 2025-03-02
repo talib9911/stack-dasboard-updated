@@ -85,6 +85,11 @@ const products = [
   },
 ];
 const StockPage = () => {
+        const[searchQuery, setSearchQuery]=useState("");
+        const filterItems = products.filter((product) =>
+          product.name.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+           
         const [page, setPage] = useState(0);
         const [rowsPerPage, setRowsPerPage] = useState(5);
       
@@ -97,10 +102,10 @@ const StockPage = () => {
           setPage(0);
         };
     return (
-        <div style={{ backgroundColor: "#f5f6fa", width: "100%" }}>
+        <div style={{ backgroundColor: "#f5f6fa", width: "100%" ,height:"89.4vh"}}>
           <Box sx={{display:"flex",justifyContent:"space-around",alignItems:"center",gap:"1036px",mt:"20px",mb:"10px",ml:"8px"}}>
           <Typography sx={{ fontSize: "32px", color: "#202224",fontWeight:700,mt:"22px",ml:"14px" }}>Product Stock</Typography>
-         <SearchBox/>    
+         <SearchBox searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>    
       </Box>
               <Box sx={{ padding: "0px",backgroundColor:"white",borderRadius:"14px",border:"1px solid #D5D5D5",ml:"20px",mt:"22px",ml:"37px",width:"83vw" }}>
             <TableContainer >
@@ -120,7 +125,8 @@ const StockPage = () => {
 
         {/* Table Body */}
         <TableBody>
-          {products.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((product) => (
+          {filterItems.length > 0 ?(
+          filterItems.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((product) => (
             <TableRow key={product.id}>
               <TableCell>
                 <img src={product.image} style={{marginLeft:"31px"}} />
@@ -151,7 +157,16 @@ const StockPage = () => {
                 </IconButton>
               </TableCell>
             </TableRow>
-          ))}
+                ))
+                ):(   
+                   <TableRow>
+                  <TableCell colSpan={7} align="center" sx={{ fontSize: "16px", color: "#999", padding: "20px" }}>
+                    No products found.
+                  </TableCell>
+                </TableRow>
+                )}
+          
+
         </TableBody>
       </Table>
     </TableContainer> 

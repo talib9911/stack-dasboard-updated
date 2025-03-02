@@ -4,7 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 
-const SearchBox = () => {
+const SearchBox = ({searchQuery,setSearchQuery}) => {
   const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: "inherit",
     "& .MuiInputBase-input": {
@@ -53,6 +53,9 @@ const SearchBox = () => {
         <StyledInputBase
           placeholder="Search product name"  
           inputProps={{ "aria-label": "search" }} sx={{bgcolor:"#FFFFFF",width:{lg:"15vw"}, height:"35px",  color:"black", border:"1px solid #D5D5D5",borderRadius:"19px" }}
+          value={searchQuery}
+          
+          onChange={(e)=> {console.log("Search Input:", e.target.value);setSearchQuery(e.target.value)}}
         />
       </Search>
     </Box>

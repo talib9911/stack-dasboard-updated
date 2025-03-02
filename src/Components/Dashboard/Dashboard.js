@@ -71,7 +71,7 @@ function Dashboard(props) {
     { text: "Team", icon: <img src={team}/>,link: "#" },
     { text: "Table", icon: <img src={table}/>,link: "#" },
     { text: "Settings", icon: <img src={setting }/>,link: "#" },
-    { text: "Logout", icon: <img src={logout}/>,link: "#" },
+    { text: "Logout", icon: <img src={logout}/>,link: "/login" },
   ].map(item => ({
     ...item,
     highlighted: location.pathname === item.link || (item.link === "/dashboardpage" && location.pathname=="/"), 
