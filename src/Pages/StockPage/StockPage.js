@@ -103,8 +103,8 @@ const StockPage = () => {
         };
     return (
         <div style={{ backgroundColor: "#f5f6fa", width: "100%" ,height:"89.4vh"}}>
-          <Box sx={{display:"flex",justifyContent:"space-around",alignItems:"center",gap:"1036px",mt:"20px",mb:"10px",ml:"8px"}}>
-          <Typography sx={{ fontSize: "32px", color: "#202224",fontWeight:700,mt:"22px",ml:"14px" }}>Product Stock</Typography>
+          <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center",gap:"0px",mt:"20px",mb:"10px",ml:"24px",mr:"15px"}}>
+          <Typography sx={{ fontSize:"clamp(26px, 2vw, 32px)", color: "#202224",fontWeight:700,ml:"14px" }}>Product Stock</Typography>
          <SearchBox searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>    
       </Box>
               <Box sx={{ padding: "0px",backgroundColor:"white",borderRadius:"14px",border:"1px solid #D5D5D5",ml:"20px",mt:"22px",ml:"37px",width:"83vw" }}>
@@ -171,7 +171,7 @@ const StockPage = () => {
       </Table>
     </TableContainer> 
     </Box>  
-    <Box sx={{display:"flex",justifyContent:"space-around",alignItems:"center",gap:"1290px",mt:"20px",mb:"10px",ml:"12px"}}>
+    <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center",gap:"0px",mt:"20px",mb:"10px",ml:"32px",mr:"30px"}}>
       <Typography sx={{fontSize:"14px",fontWeight:700}} style={{color:"rgba(32, 34, 36, 0.6)"}}>Showing 1-09 of 78</Typography>
       <img src={arrows}/>
       </Box>

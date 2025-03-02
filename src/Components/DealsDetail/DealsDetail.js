@@ -53,7 +53,7 @@ const DealsTable = () => {
         padding: "25px",
         borderRadius: "14px",
         boxShadow: "6px 6px 54px rgba(0, 0, 0, 0)",
-        width: "97.5%",
+        width: {xs:"90%",lg:"97.5%"},
         margin: "auto",
         overflowX: "auto",
       }}
