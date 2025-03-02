@@ -299,7 +299,7 @@ const OrderPage = () => {
                 </Table>
             </TableContainer>
         </Box>
-        <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center",gap:"290px",mt:"20px",mb:"10px",ml:"18px"}}>
+        <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center",gap:"100px",mt:"20px",mb:"10px",ml:"18px"}}>
       <Typography sx={{fontSize:"14px",fontWeight:700}} style={{color:"rgba(32, 34, 36, 0.6)"}}>Showing 1-09 of 78</Typography>
       <img src={arrows}/>
       </Box>
