@@ -102,7 +102,7 @@ const StockPage = () => {
           setPage(0);
         };
     return (
-        <div style={{ backgroundColor: "#f5f6fa", width: "100%" ,height:"89.4vh"}}>
+        <div style={{ backgroundColor: "#f5f6fa", width: "100%" ,height:"89.4 vh"}}>
           <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center",gap:"0px",mt:"20px",mb:"10px",ml:"24px",mr:"15px"}}>
           <Typography sx={{ fontSize:"clamp(26px, 2vw, 32px)", color: "#202224",fontWeight:700,ml:"14px" }}>Product Stock</Typography>
          <SearchBox searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>    
