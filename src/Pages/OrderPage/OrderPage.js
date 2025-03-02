@@ -89,7 +89,12 @@ const OrderPage = () => {
                 ml="20px"
                 mt="25px"
                 position="relative"
-                sx={{ width: { xs: "90vw", lg: "48vw" } }}
+                sx={{
+                    minWidth: { xs: "74vw",sm: "4vw", md: "48vw" },
+                    maxWidth: "178vw"
+                  }}
+                  
+
             >
                 {/* Filter Icon */}
                 <Box display="flex" alignItems="center" height="50px" gap="25px" paddingLeft="13px"> 
@@ -251,8 +256,10 @@ const OrderPage = () => {
                     Reset Filter
                 </Button>
             </Box>
-            <Box sx={{ paddingTop: "20px",backgroundColor:"white",borderRadius:"14px",border:"1px solid #D5D5D5",ml:"20px",mt:"18px" }}>
-            <TableContainer>
+            <Box sx={{ paddingTop: "20px",backgroundColor:"white",borderRadius:"14px",border:"1px solid #D5D5D5",ml:"20px",mt:"18px" ,overflowX: "auto", 
+        width: "100%",       
+        maxWidth: {xs:"80vw",lg:"82vw"}}}>
+            <TableContainer sx={{ overflowX: "auto", maxWidth: "100%" }}>
                 <Table>
                     {/* Table Head */}
                     <TableHead >
